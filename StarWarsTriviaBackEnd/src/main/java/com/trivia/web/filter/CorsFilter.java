@@ -1,4 +1,4 @@
-package com.trivia.utility;
+package com.trivia.web.filter;
 
 import java.io.IOException;
 import javax.servlet.Filter;
