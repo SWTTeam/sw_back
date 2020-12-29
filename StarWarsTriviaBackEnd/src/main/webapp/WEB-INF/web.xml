@@ -27,7 +27,7 @@
 		<description></description>
 		<display-name>MasterServlet</display-name>
 		<servlet-name>MasterServlet</servlet-name>
-		<servlet-class>com.revature.web.MasterServlet</servlet-class>
+		<servlet-class>com.trivia.web.MasterServlet</servlet-class>
 	</servlet>
 
 
