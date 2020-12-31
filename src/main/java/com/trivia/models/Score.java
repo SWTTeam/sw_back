@@ -2,9 +2,23 @@ package com.trivia.models;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "scores")
 public class Score {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="score_id")
 	private int scoreID;
+	
 	private int userID;
 	private int score;
 	private Date genration;
