@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.trivia.models.Question;
 
 @RestController
-@RequestMapping(value="trivia")
+@RequestMapping(value="/trivia")
 @CrossOrigin
 public class QuestionController {
 

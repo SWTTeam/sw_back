@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.trivia.models.Score;
 
 @RestController
-@RequestMapping(value="score")
+@RequestMapping(value="/score")
 @CrossOrigin
 public class ScoreController {
 

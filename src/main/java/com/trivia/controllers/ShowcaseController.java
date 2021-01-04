@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.trivia.models.Showcase;
 
 @RestController
-@RequestMapping(value="showcase")
+@RequestMapping(value="/showcase")
 @CrossOrigin
 public class ShowcaseController {
 

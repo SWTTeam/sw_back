@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.trivia.models.User;
 
 @RestController
-@RequestMapping(value="register")
+@RequestMapping(value="/register")
 @CrossOrigin
 public class RegisterController {
 
