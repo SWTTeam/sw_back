@@ -12,7 +12,6 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
-
 	<context-param>
 		<param-name>contextConfiguration</param-name>
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
@@ -20,7 +19,6 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-
 	<servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -33,6 +31,4 @@
 		<servlet-name>DispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
-
 </web-app>

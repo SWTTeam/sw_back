@@ -10,13 +10,4 @@
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
     <mvc:default-servlet-handler/>
-    
-    <!-- can also setup view resolver here -->
-    <!--  Not required, can't return views while restful-->   
-    <mvc:resources location="/static/" mapping="/static/**"></mvc:resources>
-	<bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/static/"></property>
-		<property name="suffix" value=".html"></property>
-	</bean>
-	
 </beans>
