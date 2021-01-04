@@ -16,51 +16,51 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.trivia.models.User;
+import com.trivia.models.Question;
 
 @RestController
-@RequestMapping(value="login")
+@RequestMapping(value="trivia")
 @CrossOrigin
-public class LoginController {
+public class QuestionController {
 
-	private UserService us;
+	private QuestionService qs;
 
 	@Autowired
-	public LoginController(UserService us) {
+	public QuestionController(QuestionService qs) {
 		super();
-		this.us = us;
+		this.qs = qs;
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
-		User u = us.getById(id);
-		if (u==null)
+	public ResponseEntity<Question> getOneQuestion(@PathVariable("id") int id) {
+		Question q = qs.getById(id);
+		if (q==null)
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(u);
+		return ResponseEntity.status(HttpStatus.OK).body(q);
 	}
 
-	@GetMapping
-	public List<User> getUsers() {
-		return ResponseEntity.status(HttpStatus.OK).body(us.getAll());
+	@RequestMapping(method=RequestMethod.GET)
+	public List<Question> getQuestion() {
+		return ResponseEntity.status(HttpStatus.OK).body(qs.getAll());
 	}
 	
 	@PostMapping
-	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
-		if(us.storeUser(u))
+	public ResponseEntity<Boolean> insertQuestion(@RequestBody Question q) {
+		if(qs.storeQuestion(q))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@PutMapping
-	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {
-		if(us.update(u))
+	public ResponseEntity<Boolean> updateQuestion(@RequestBody Question q) {
+		if(qs.update(q))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
+		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@DeleteMapping
-	public ResponseEntity<Boolean> deleteUser(@RequestBody User u) {
-		if(us.delete(u))
+	public ResponseEntity<Boolean> deleteQuestion(@RequestBody Question q) {
+		if(qs.delete(q))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}

@@ -15,52 +15,51 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.trivia.models.User;
+import com.trivia.models.Showcase;
 
 @RestController
-@RequestMapping(value="login")
+@RequestMapping(value="showcase")
 @CrossOrigin
-public class LoginController {
+public class ShowcaseController {
 
-	private UserService us;
+	private ShowcaseService scs;
 
 	@Autowired
-	public LoginController(UserService us) {
+	public ShowcaseController(ShowcaseService scs) {
 		super();
-		this.us = us;
+		this.scs = scs;
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
-		User u = us.getById(id);
-		if (u==null)
+	public ResponseEntity<Showcase> getOneShowcase(@PathVariable("id") int id) {
+		Showcase sc = scs.getById(id);
+		if (sc==null) 
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(u);
+		return ResponseEntity.status(HttpStatus.OK).body(sc);
 	}
 
-	@GetMapping
-	public List<User> getUsers() {
-		return ResponseEntity.status(HttpStatus.OK).body(us.getAll());
+	@RequestMapping(method=RequestMethod.GET)
+	public List<Showcase> getShowcase() {
+		return ResponseEntity.status(HttpStatus.OK).body(scs.getAll());
 	}
 	
 	@PostMapping
-	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
-		if(us.storeUser(u))
+	public ResponseEntity<Boolean> insertShowcase(@RequestBody Showcase sc) {
+		if(scs.storeShowcase(sc))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@PutMapping
-	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {
-		if(us.update(u))
+	public ResponseEntity<Boolean> updateShowcase(@RequestBody Showcase sc) {
+		if(scs.update(sc))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
+		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@DeleteMapping
-	public ResponseEntity<Boolean> deleteUser(@RequestBody User u) {
-		if(us.delete(u))
+	public ResponseEntity<Boolean> deleteShowcase(@RequestBody Showcase sc) {
+		if(scs.delete(sc))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}

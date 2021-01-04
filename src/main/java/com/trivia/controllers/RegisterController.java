@@ -19,14 +19,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.trivia.models.User;
 
 @RestController
-@RequestMapping(value="login")
+@RequestMapping(value="register")
 @CrossOrigin
-public class LoginController {
+public class RegisterController {
 
 	private UserService us;
 
 	@Autowired
-	public LoginController(UserService us) {
+	public RegisterController(UserService us) {
 		super();
 		this.us = us;
 	}

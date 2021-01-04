@@ -16,51 +16,51 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.trivia.models.User;
+import com.trivia.models.Score;
 
 @RestController
-@RequestMapping(value="login")
+@RequestMapping(value="score")
 @CrossOrigin
-public class LoginController {
+public class ScoreController {
 
-	private UserService us;
+	private ScoreService ss;
 
 	@Autowired
-	public LoginController(UserService us) {
+	public ScoreController(ShowcaseService ss) {
 		super();
-		this.us = us;
+		this.ss = ss;
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
-		User u = us.getById(id);
-		if (u==null)
+	public ResponseEntity<Score> getOneScore(@PathVariable("id") int id) {
+		Score s = ss.getById(id);
+		if (s==null)
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(u);
+		return ResponseEntity.status(HttpStatus.OK).body(s);
 	}
 
-	@GetMapping
-	public List<User> getUsers() {
-		return ResponseEntity.status(HttpStatus.OK).body(us.getAll());
+	@RequestMapping(method=RequestMethod.GET)
+	public List<Score> getScore() {
+		return ResponseEntity.status(HttpStatus.OK).body(ss.getAll());
 	}
 	
 	@PostMapping
-	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
-		if(us.storeUser(u))
+	public ResponseEntity<Boolean> insertScore(@RequestBody Score s) {
+		if(ss.storeScore(s))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@PutMapping
-	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {
-		if(us.update(u))
+	public ResponseEntity<Boolean> updateShowcase(@RequestBody Score s) {
+		if(ss.update(s))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
+		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
 	
 	@DeleteMapping
-	public ResponseEntity<Boolean> deleteUser(@RequestBody User u) {
-		if(us.delete(u))
+	public ResponseEntity<Boolean> deleteShowcase(@RequestBody Score s) {
+		if(ss.delete(s))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
