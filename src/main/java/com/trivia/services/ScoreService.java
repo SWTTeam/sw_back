@@ -27,7 +27,7 @@ public class ScoreService {
 		return sDao.findAll();
 	}
 
-	public boolean storePokemon(Score s) {
+	public boolean storeScore(Score s) {
 		sDao.insert(s);
 		if(sDao.findById(s.getScoreID()).equals(s))
 			return true;

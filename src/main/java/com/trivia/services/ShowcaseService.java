@@ -27,7 +27,7 @@ public class ShowcaseService {
 		return scDao.findAll();
 	}
 
-	public boolean storePokemon(Showcase sc) {
+	public boolean storeShowcase(Showcase sc) {
 		scDao.insert(sc);
 		if(scDao.findById(sc.getShowcaseId()).equals(sc))
 			return true;

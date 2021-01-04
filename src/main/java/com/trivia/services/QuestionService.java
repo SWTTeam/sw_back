@@ -27,7 +27,7 @@ public class QuestionService {
 		return qDao.findAll();
 	}
 
-	public boolean storePokemon(Question q) {
+	public boolean storeQuestion(Question q) {
 		qDao.insert(q);
 		if(qDao.findById(q.getQuestionID()).equals(q))
 			return true;

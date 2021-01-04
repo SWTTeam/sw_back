@@ -31,7 +31,7 @@ public class UserService {
 		return uDao.findAll();
 	}
 
-	public boolean storePokemon(User u) {
+	public boolean storeUser(User u) {
 		uDao.insert(u);
 		if(uDao.findById(u.getUserId()).equals(u))
 			return true;
