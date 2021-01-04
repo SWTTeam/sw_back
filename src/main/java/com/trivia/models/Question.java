@@ -1,5 +1,7 @@
 package com.trivia.models;
 
+import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,46 +12,67 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "questions")
 public class Question {
-
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="question_id")
 	private int questionID;
+	@Column
 	private String question;
-	private String answer;
 	
+	public Question() {
+		super();
+	}
+
+	public Question(String question) {
+		super();
+		this.question = question;
+	}
+
+	public Question(int questionID, String question) {
+		super();
+		this.questionID = questionID;
+		this.question = question;
+	}
+
 	public int getQuestionID() {
 		return questionID;
 	}
+
 	public void setQuestionID(int questionID) {
 		this.questionID = questionID;
 	}
+
 	public String getQuestion() {
 		return question;
 	}
+
 	public void setQuestion(String question) {
 		this.question = question;
 	}
-	public String getAnswer() {
-		return answer;
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(question, questionID);
 	}
-	public void setAnswer(String answer) {
-		this.answer = answer;
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Question other = (Question) obj;
+		return Objects.equals(question, other.question) && questionID == other.questionID;
 	}
-	public Question(int questionID, String question, String answer) {
-		super();
-		this.questionID = questionID;
-		this.question = question;
-		this.answer = answer;
-	}
-	public Question(String question, String answer) {
-		super();
-		this.question = question;
-		this.answer = answer;
-	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Question [questionID=" + questionID + ", question=" + question + "]";
+	}	
 }
