@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.trivia.models.Score;
+import com.trivia.services.ScoreService;
 
 @RestController
 @RequestMapping(value="/score")
@@ -26,7 +27,7 @@ public class ScoreController {
 	private ScoreService ss;
 
 	@Autowired
-	public ScoreController(ShowcaseService ss) {
+	public ScoreController(ScoreService ss) {
 		super();
 		this.ss = ss;
 	}
@@ -40,7 +41,7 @@ public class ScoreController {
 	}
 
 	@RequestMapping(method=RequestMethod.GET)
-	public List<Score> getScore() {
+	public ResponseEntity<List<Score>> getScore() {
 		return ResponseEntity.status(HttpStatus.OK).body(ss.getAll());
 	}
 	

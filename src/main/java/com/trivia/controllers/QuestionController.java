@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.trivia.models.Question;
+import com.trivia.services.QuestionService;
 
 @RestController
 @RequestMapping(value="/trivia")
@@ -40,7 +41,7 @@ public class QuestionController {
 	}
 
 	@RequestMapping(method=RequestMethod.GET)
-	public List<Question> getQuestion() {
+	public ResponseEntity<List<Question>> getQuestion() {
 		return ResponseEntity.status(HttpStatus.OK).body(qs.getAll());
 	}
 	

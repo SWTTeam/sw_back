@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.trivia.models.Showcase;
+import com.trivia.services.ShowcaseService;
 
 @RestController
 @RequestMapping(value="/showcase")
@@ -39,7 +41,7 @@ public class ShowcaseController {
 	}
 
 	@RequestMapping(method=RequestMethod.GET)
-	public List<Showcase> getShowcase() {
+	public ResponseEntity<List<Showcase>> getShowcase() {
 		return ResponseEntity.status(HttpStatus.OK).body(scs.getAll());
 	}
 	
