@@ -31,7 +31,7 @@ public class User {
 	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
 	private List<Score> userScores = new ArrayList<>();
 	
-	@OneToOne(mappedBy = "user_id", fetch = FetchType.EAGER)
+	@OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
 	private Showcase showcase;
 
 	public User() {

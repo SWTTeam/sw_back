@@ -32,7 +32,7 @@ public class Showcase {
 	private int people4;
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @JoinColumn()
 	private User user;
 
 	public Showcase() {
