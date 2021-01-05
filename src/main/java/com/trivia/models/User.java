@@ -39,28 +39,26 @@ public class User {
 
 	public User() {
 		super();
-	}	
-
-	public User(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
 	}
 
-	public User(String username, String password, List<Score> userScores, Showcase showcase) {
+	public User(String username, String password, List<Score> userScores, List<PersonReward> userRewards,
+			Showcase showcase) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.userScores = userScores;
+		this.userRewards = userRewards;
 		this.showcase = showcase;
 	}
 
-	public User(int userId, String username, String password, List<Score> userScores, Showcase showcase) {
+	public User(int userId, String username, String password, List<Score> userScores, List<PersonReward> userRewards,
+			Showcase showcase) {
 		super();
 		this.userId = userId;
 		this.username = username;
 		this.password = password;
 		this.userScores = userScores;
+		this.userRewards = userRewards;
 		this.showcase = showcase;
 	}
 
@@ -96,6 +94,14 @@ public class User {
 		this.userScores = userScores;
 	}
 
+	public List<PersonReward> getUserRewards() {
+		return userRewards;
+	}
+
+	public void setUserRewards(List<PersonReward> userRewards) {
+		this.userRewards = userRewards;
+	}
+
 	public Showcase getShowcase() {
 		return showcase;
 	}
@@ -106,7 +112,7 @@ public class User {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(password, showcase, userId, userScores, username);
+		return Objects.hash(password, showcase, userId, userRewards, userScores, username);
 	}
 
 	@Override
@@ -122,13 +128,13 @@ public class User {
 		}
 		User other = (User) obj;
 		return Objects.equals(password, other.password) && Objects.equals(showcase, other.showcase)
-				&& userId == other.userId && Objects.equals(userScores, other.userScores)
-				&& Objects.equals(username, other.username);
+				&& userId == other.userId && Objects.equals(userRewards, other.userRewards)
+				&& Objects.equals(userScores, other.userScores) && Objects.equals(username, other.username);
 	}
 
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", userScores="
-				+ userScores + ", showcase=" + showcase + "]";
+				+ userScores + ", userRewards=" + userRewards + ", showcase=" + showcase + "]";
 	}	
 }
