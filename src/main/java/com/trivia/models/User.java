@@ -13,7 +13,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
 
+@Component
 @Entity
 @Table(name = "users")
 public class User {
@@ -23,18 +25,18 @@ public class User {
 	@Column(name="user_id")
 	private int userId;
 	
-	@Column//(nullable=false, unique=true)
+	@Column(nullable=false, unique=true)
 	private String username;
-	@Column//(nullable=false)
+	@Column(nullable=false)
 	private String password;
 	
-	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "userS", fetch = FetchType.EAGER)
 	private List<Score> userScores = new ArrayList<>();	
 
-	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "userPR", fetch = FetchType.LAZY)
 	private List<PersonReward> userRewards = new ArrayList<>();
 	
-	@OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+	@OneToOne(mappedBy = "userSC", fetch = FetchType.EAGER)
 	private Showcase showcase;
 
 	public User() {

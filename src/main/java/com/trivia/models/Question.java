@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name = "questions")
 public class Question {
@@ -18,7 +21,7 @@ public class Question {
 	@Column(name="question_id")
 	private int questionID;
 	
-	@Column//(nullable=false, unique=true)
+	@Column(nullable=false, unique=true)
 	private String question;
 	
 	public Question() {

@@ -14,7 +14,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
 
+@Component
 @Entity
 @Table(name = "scores")
 public class Score {
@@ -24,14 +26,14 @@ public class Score {
 	@Column(name="score_id")
 	private int scoreID;	
 	
-	@Column//(nullable=false)
+	@Column(nullable=false)
 	private int score;
-	@Column//(nullable=false)
+	@Column(nullable=false)
 	private Date generation;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="user_id"/*, nullable=false*/)
-	private User user;
+	@JoinColumn(name="user_id", nullable=false)
+	private User userS;
 
 	public Score() {
 		super();
@@ -41,7 +43,7 @@ public class Score {
 		super();
 		this.score = score;
 		this.generation = generation;
-		this.user = user;
+		this.userS = user;
 	}
 
 	public Score(int scoreID, int score, Date generation, User user) {
@@ -49,7 +51,7 @@ public class Score {
 		this.scoreID = scoreID;
 		this.score = score;
 		this.generation = generation;
-		this.user = user;
+		this.userS = user;
 	}
 
 	public int getScoreID() {
@@ -77,16 +79,16 @@ public class Score {
 	}
 
 	public User getUser() {
-		return user;
+		return userS;
 	}
 
 	public void setUser(User user) {
-		this.user = user;
+		this.userS = user;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(generation, score, scoreID, user);
+		return Objects.hash(generation, score, scoreID, userS);
 	}
 
 	@Override
@@ -102,11 +104,11 @@ public class Score {
 		}
 		Score other = (Score) obj;
 		return Objects.equals(generation, other.generation) && score == other.score && scoreID == other.scoreID
-				&& Objects.equals(user, other.user);
+				&& Objects.equals(userS, other.userS);
 	}
 
 	@Override
 	public String toString() {
-		return "Score [scoreID=" + scoreID + ", score=" + score + ", generation=" + generation + ", user=" + user + "]";
+		return "Score [scoreID=" + scoreID + ", score=" + score + ", generation=" + generation + ", user=" + userS + "]";
 	}	
 }

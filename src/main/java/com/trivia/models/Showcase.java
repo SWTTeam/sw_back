@@ -13,6 +13,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name = "showcases")
 public class Showcase {
@@ -32,8 +35,8 @@ public class Showcase {
 	private int people4;
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-    @JoinColumn(name="user_id"/*, nullable=false, unique=true*/)
-	private User user;
+    @JoinColumn(name="user_id", nullable=false, unique=true)
+	private User userSC;
 
 	public Showcase() {
 		super();
@@ -45,7 +48,7 @@ public class Showcase {
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.user = user;
+		this.userSC = user;
 	}
 
 	public Showcase(int showcaseId, int people1, int people2, int people3, int people4, User user) {
@@ -55,7 +58,7 @@ public class Showcase {
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.user = user;
+		this.userSC = user;
 	}
 
 	public int getShowcaseId() {
@@ -99,16 +102,16 @@ public class Showcase {
 	}
 
 	public User getUser() {
-		return user;
+		return userSC;
 	}
 
 	public void setUser(User user) {
-		this.user = user;
+		this.userSC = user;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(people1, people2, people3, people4, showcaseId, user);
+		return Objects.hash(people1, people2, people3, people4, showcaseId, userSC);
 	}
 
 	@Override
@@ -124,12 +127,12 @@ public class Showcase {
 		}
 		Showcase other = (Showcase) obj;
 		return people1 == other.people1 && people2 == other.people2 && people3 == other.people3
-				&& people4 == other.people4 && showcaseId == other.showcaseId && Objects.equals(user, other.user);
+				&& people4 == other.people4 && showcaseId == other.showcaseId && Objects.equals(userSC, other.userSC);
 	}
 
 	@Override
 	public String toString() {
 		return "Showcase [showcaseId=" + showcaseId + ", people1=" + people1 + ", people2=" + people2 + ", people3="
-				+ people3 + ", people4=" + people4 + ", user=" + user + "]";
+				+ people3 + ", people4=" + people4 + ", user=" + userSC + "]";
 	}
 }

@@ -12,6 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @Entity
 @Table(name = "person_reward")
 public class PersonReward {
@@ -21,12 +24,12 @@ public class PersonReward {
 	@Column(name="person_reward_id")
 	private int prNumber;
 	
-	@Column//(nullable=false)
+	@Column(nullable=false)
 	private int personId;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="user_id"/*, nullable=false*/)
-	private User user;
+	@JoinColumn(name="user_id", nullable=false)
+	private User userPR;
 
 	public PersonReward() {
 		super();
@@ -35,14 +38,14 @@ public class PersonReward {
 	public PersonReward(int personId, User user) {
 		super();
 		this.personId = personId;
-		this.user = user;
+		this.userPR = user;
 	}
 
 	public PersonReward(int prNumber, int personId, User user) {
 		super();
 		this.prNumber = prNumber;
 		this.personId = personId;
-		this.user = user;
+		this.userPR = user;
 	}
 
 	public int getPrNumber() {
@@ -62,16 +65,16 @@ public class PersonReward {
 	}
 
 	public User getUser() {
-		return user;
+		return userPR;
 	}
 
 	public void setUser(User user) {
-		this.user = user;
+		this.userPR = user;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(personId, prNumber, user);
+		return Objects.hash(personId, prNumber, userPR);
 	}
 
 	@Override
@@ -86,12 +89,12 @@ public class PersonReward {
 			return false;
 		}
 		PersonReward other = (PersonReward) obj;
-		return personId == other.personId && prNumber == other.prNumber && Objects.equals(user, other.user);
+		return personId == other.personId && prNumber == other.prNumber && Objects.equals(userPR, other.userPR);
 	}
 
 	@Override
 	public String toString() {
-		return "PersonReward [prNumber=" + prNumber + ", personId=" + personId + ", user=" + user + "]";
+		return "PersonReward [prNumber=" + prNumber + ", personId=" + personId + ", user=" + userPR + "]";
 	}	
 }
 
