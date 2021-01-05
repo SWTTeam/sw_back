@@ -19,7 +19,7 @@ import com.trivia.models.User;
 import com.trivia.services.UserService;
 
 @RestController
-@RequestMapping(value="/")
+@RequestMapping(value="/login")
 @CrossOrigin
 public class LoginController {
 
