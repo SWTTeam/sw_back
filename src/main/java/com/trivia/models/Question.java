@@ -18,7 +18,7 @@ public class Question {
 	@Column(name="question_id")
 	private int questionID;
 	
-	@Column(nullable=false, unique=true)
+	@Column//(nullable=false, unique=true)
 	private String question;
 	
 	public Question() {

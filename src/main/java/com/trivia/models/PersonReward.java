@@ -21,11 +21,11 @@ public class PersonReward {
 	@Column(name="person_reward_id")
 	private int prNumber;
 	
-	@Column(nullable=false)
+	@Column//(nullable=false)
 	private int personId;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="user_id", nullable=false)
+	@JoinColumn(name="user_id"/*, nullable=false*/)
 	private User user;
 
 	public PersonReward() {
