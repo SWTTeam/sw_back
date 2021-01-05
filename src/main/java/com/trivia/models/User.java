@@ -23,9 +23,9 @@ public class User {
 	@Column(name="user_id")
 	private int userId;
 	
-	@Column(nullable=false, unique=true)
+	@Column//(nullable=false, unique=true)
 	private String username;
-	@Column(nullable=false)
+	@Column//(nullable=false)
 	private String password;
 	
 	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
