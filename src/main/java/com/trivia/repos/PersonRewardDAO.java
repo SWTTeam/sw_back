@@ -6,7 +6,7 @@ import com.trivia.models.PersonReward;
 
 public interface PersonRewardDAO {
 	
-	public PersonReward findById (int id);
+	public PersonReward findById(int id);
 	
 	public List<PersonReward> findAll();
 	

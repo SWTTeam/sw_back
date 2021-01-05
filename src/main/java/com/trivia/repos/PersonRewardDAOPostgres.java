@@ -40,20 +40,20 @@ public class PersonRewardDAOPostgres implements PersonRewardDAO {
 
 	@Override
 	public void insert(PersonReward reward) {
-		// TODO Auto-generated method stub
-
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(reward);
 	}
 
 	@Override
 	public void delete(PersonReward reward) {
-		// TODO Auto-generated method stub
-
+		Session session = sessionFactory.getCurrentSession();
+		session.update(reward);
 	}
 
 	@Override
 	public void update(PersonReward reward) {
-		// TODO Auto-generated method stub
-
+		Session session = sessionFactory.getCurrentSession();
+		session.delete(reward);
 	}
 
 }

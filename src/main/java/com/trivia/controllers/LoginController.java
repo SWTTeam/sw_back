@@ -23,33 +23,33 @@ import com.trivia.services.UserService;
 @CrossOrigin
 public class LoginController {
 
-	private UserService us;
+	private UserService userService;
 
 	@Autowired
-	public LoginController(UserService us) {
+	public LoginController(UserService userService) {
 		super();
-		this.us = us;
+		this.userService = userService;
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
-		User u = us.getById(id);
-		if (u==null)
+		User user = userService.getById(id);
+		if (user == null)
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(u);
+		return ResponseEntity.status(HttpStatus.OK).body(user);
 	}
 
 	@GetMapping
 	public ResponseEntity<List<User>> getUsers() {
-		return ResponseEntity.status(HttpStatus.OK).body(us.getAll());
+		return ResponseEntity.status(HttpStatus.OK).body(userService.getAll());
 	}
 	
 	@PostMapping
-	public ResponseEntity<User> loginVerification(@RequestBody User u) {
-		User user = us.loginVer(u);
-		if (user==null)
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(user);		
-		return ResponseEntity.status(HttpStatus.OK).body(user);
+	public ResponseEntity<User> loginVerification(@RequestBody User user) {
+		User foundUser = userService.loginVer(user);
+		if (foundUser == null)
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
+		return ResponseEntity.status(HttpStatus.OK).body(foundUser);
 	}
 	
 //	@PostMapping
@@ -60,15 +60,15 @@ public class LoginController {
 //	}
 	
 	@PutMapping
-	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {
-		if(us.update(u))
+	public ResponseEntity<Boolean> updateUser(@RequestBody User user) {
+		if(userService.update(user))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
 	}
 	
 	@DeleteMapping
-	public ResponseEntity<Boolean> deleteUser(@RequestBody User u) {
-		if(us.delete(u))
+	public ResponseEntity<Boolean> deleteUser(@RequestBody User user) {
+		if(userService.delete(user))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
