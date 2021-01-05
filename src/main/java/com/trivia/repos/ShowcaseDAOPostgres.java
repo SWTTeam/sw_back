@@ -16,8 +16,13 @@ import com.trivia.models.Showcase;
 @Transactional
 public class ShowcaseDAOPostgres implements ShowcaseDAO{
 
-	@Autowired
 	private SessionFactory sf;
+
+	@Autowired
+	public ShowcaseDAOPostgres(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
 	
 	@Override
 	public Showcase findById(int id) {

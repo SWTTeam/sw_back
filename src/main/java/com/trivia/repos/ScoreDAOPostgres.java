@@ -16,8 +16,13 @@ import com.trivia.models.Score;
 @Transactional
 public class ScoreDAOPostgres implements ScoreDAO{
 
-	@Autowired
 	private SessionFactory sf;
+
+	@Autowired
+	public ScoreDAOPostgres(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
 	
 	@Override
 	public Score findById(int id) {

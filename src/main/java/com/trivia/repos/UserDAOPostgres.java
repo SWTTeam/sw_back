@@ -16,8 +16,13 @@ import com.trivia.models.User;
 @Transactional
 public class UserDAOPostgres implements UserDAO{
 	
-	@Autowired
 	private SessionFactory sf;
+
+	@Autowired
+	public UserDAOPostgres(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
 	
 	@Override
 	public User findById(int id) {

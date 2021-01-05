@@ -15,9 +15,14 @@ import com.trivia.models.Question;
 @Repository
 @Transactional
 public class QuestionDAOPostgres implements QuestionDAO {
+	
+	private SessionFactory sf;
 
 	@Autowired
-	private SessionFactory sf;
+	public QuestionDAOPostgres(SessionFactory sf) {
+		super();
+		this.sf = sf;
+	}
 	
 	@Override
 	public Question findById(int id) {
