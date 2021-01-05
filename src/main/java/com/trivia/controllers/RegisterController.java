@@ -45,10 +45,10 @@ public class RegisterController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
+	public ResponseEntity insertUser(@RequestBody User u) {
 		if(us.storeUser(u))
-			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
 	}
 	
 	@PutMapping
