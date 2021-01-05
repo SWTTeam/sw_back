@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.trivia.models.User;
+import com.trivia.models.UserDTO;
 import com.trivia.services.UserService;
 
 @RestController
@@ -45,11 +46,15 @@ public class LoginController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<User> loginVerification(@RequestBody User user) {
+	public ResponseEntity<UserDTO> loginVerification(@RequestBody User user) {
 		User foundUser = userService.loginVer(user);
-		if (foundUser == null)
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(foundUser);
+		UserDTO userDTO = null;
+		if (foundUser == null) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();	
+		}else {
+			userDTO = new UserDTO(foundUser.getUserId(), foundUser.getUsername());
+			return ResponseEntity.status(HttpStatus.OK).body(userDTO);
+		}
 	}
 	
 //	@PostMapping
