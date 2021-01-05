@@ -26,6 +26,13 @@ public class UserService {
 	public User getByName(String name) {
 		return uDao.findByUsername(name);
 	}
+	
+	public User loginVer(User u) {
+		User userVer = uDao.findByUsername(u.getUsername());
+		if(u.getPassword().equals(userVer.getPassword()))
+			return userVer;
+		return null;
+	}	
 
 	public List<User> getAll() {		
 		return uDao.findAll();

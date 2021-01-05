@@ -40,13 +40,13 @@ public class ScoreDAOPostgres implements ScoreDAO{
 	}
 
 	@Override
-	public void delete(Score s) {
+	public void update(Score s) {
 		Session ses = sf.getCurrentSession();
 		ses.update(s);
 	}
 
 	@Override
-	public void update(Score s) {
+	public void delete(Score s) {
 		Session ses = sf.getCurrentSession();
 		ses.delete(s);
 	}

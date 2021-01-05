@@ -46,13 +46,13 @@ public class UserDAOPostgres implements UserDAO{
 	}
 
 	@Override
-	public void delete(User u) {
+	public void update(User u) {
 		Session s = sf.getCurrentSession();
 		s.update(u);
 	}
 
 	@Override
-	public void update(User u) {
+	public void delete(User u) {
 		Session s = sf.getCurrentSession();
 		s.delete(u);
 	}

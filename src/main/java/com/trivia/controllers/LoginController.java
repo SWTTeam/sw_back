@@ -19,7 +19,7 @@ import com.trivia.models.User;
 import com.trivia.services.UserService;
 
 @RestController
-@RequestMapping(value="/login")
+@RequestMapping(value="/")
 @CrossOrigin
 public class LoginController {
 
@@ -45,11 +45,19 @@ public class LoginController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
-		if(us.storeUser(u))
-			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+	public ResponseEntity<User> loginVerification(@RequestBody User u) {
+		User user = us.loginVer(u);
+		if (user==null)
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(user);		
+		return ResponseEntity.status(HttpStatus.OK).body(user);
 	}
+	
+//	@PostMapping
+//	public ResponseEntity<Boolean> insertUser(@RequestBody User u) {
+//		if(us.storeUser(u))
+//			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
+//		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+//	}
 	
 	@PutMapping
 	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {

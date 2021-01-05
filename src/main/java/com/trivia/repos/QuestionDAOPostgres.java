@@ -40,13 +40,13 @@ public class QuestionDAOPostgres implements QuestionDAO {
 	}
 
 	@Override
-	public void delete(Question q) {
+	public void update(Question q) {
 		Session s = sf.getCurrentSession();
 		s.update(q);
 	}
 
 	@Override
-	public void update(Question q) {
+	public void delete(Question q) {
 		Session s = sf.getCurrentSession();
 		s.delete(q);
 	}

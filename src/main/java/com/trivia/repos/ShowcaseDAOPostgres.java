@@ -40,13 +40,13 @@ public class ShowcaseDAOPostgres implements ShowcaseDAO{
 	}
 
 	@Override
-	public void delete(Showcase sc) {
+	public void update(Showcase sc) {
 		Session s = sf.getCurrentSession();
 		s.update(sc);
 	}
 
 	@Override
-	public void update(Showcase sc) {
+	public void delete(Showcase sc) {
 		Session s = sf.getCurrentSession();
 		s.delete(sc);
 	}
