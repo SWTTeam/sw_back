@@ -24,13 +24,13 @@ public class Score {
 	@Column(name="score_id")
 	private int scoreID;	
 	
-	@Column
+	@Column(nullable=false)
 	private int score;
-	@Column
+	@Column(nullable=false)
 	private Date generation;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="user_id",nullable=false)
 	private User user;
 
 	public Score() {

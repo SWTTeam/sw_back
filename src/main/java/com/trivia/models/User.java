@@ -23,13 +23,16 @@ public class User {
 	@Column(name="user_id")
 	private int userId;
 	
-	@Column
+	@Column(nullable=false, unique=true)
 	private String username;
-	@Column
+	@Column(nullable=false)
 	private String password;
 	
 	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
-	private List<Score> userScores = new ArrayList<>();
+	private List<Score> userScores = new ArrayList<>();	
+
+	@OneToMany(mappedBy ="user", fetch = FetchType.EAGER)
+	private List<PersonReward> userRewards = new ArrayList<>();
 	
 	@OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
 	private Showcase showcase;

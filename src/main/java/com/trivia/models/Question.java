@@ -17,7 +17,8 @@ public class Question {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="question_id")
 	private int questionID;
-	@Column
+	
+	@Column(nullable=false, unique=true)
 	private String question;
 	
 	public Question() {
