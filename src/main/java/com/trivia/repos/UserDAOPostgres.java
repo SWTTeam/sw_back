@@ -37,6 +37,11 @@ public class UserDAOPostgres implements UserDAO {
 		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
 		crit.add(Restrictions.eq("username", name));
 		return (User) crit.list().get(0);
+		//Session s = sf.getCurrentSession();
+		//System.out.println("findByUsername got session");
+//		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
+//		  crit.add(Restrictions.eq("username", name)); //assuming Employee entity has "email" field
+//		  return (User) crit.list().get(0);
 
 	}
 
@@ -67,4 +72,6 @@ public class UserDAOPostgres implements UserDAO {
 		Session s = sf.getCurrentSession();
 		s.delete(u);
 	}
+	
+	
 }

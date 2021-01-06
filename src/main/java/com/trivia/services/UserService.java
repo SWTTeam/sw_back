@@ -63,7 +63,7 @@ public class UserService {
 		} catch (GeneralSecurityException | IOException e) {
 			e.printStackTrace();
 		}
-
+		
 		User testUser = uDao.findByUsername(u.getUsername());
 		if (u.getUsername().equals(testUser.getUsername()))
 			return true;
