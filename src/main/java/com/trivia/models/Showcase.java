@@ -15,6 +15,8 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Component
 @Entity
 @Table(name = "showcases")
@@ -36,6 +38,7 @@ public class Showcase {
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name="user_id", nullable=false, unique=true)
+	@JsonBackReference
 	private User showcaseUser;
 
 	public Showcase() {

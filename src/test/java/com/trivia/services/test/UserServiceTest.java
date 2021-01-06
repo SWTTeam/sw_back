@@ -1,29 +1,34 @@
 package com.trivia.services.test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.io.IOException;
 import java.security.GeneralSecurityException;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.trivia.models.User;
-import com.trivia.repos.UserDAO;
 import com.trivia.services.UserService;
 import com.trivia.utilities.EncryptionUtility;
 
 public class UserServiceTest {
 
-	public static UserService userService;
-	public static UserDAO userDAO;
+	private static UserService userService;
 	
-	@BeforeAll
-	public static void setUpUserService() {
-		userService = new UserService(userDAO);
+	public UserServiceTest() {
 	}
 	
+	@BeforeAll
+	static void setUpEnviron() {
+		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		userService = ac.getBean(UserService.class);
+	}
+
 	@Test
-	void getByIdTest(int id) {
+	void getByIdTest() {
 		User storedUser = userService.getById(2);
 		try {
 			EncryptionUtility encryptionUtility = new EncryptionUtility();

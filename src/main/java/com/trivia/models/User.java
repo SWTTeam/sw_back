@@ -3,6 +3,7 @@ package com.trivia.models;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,6 +15,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Component
 @Entity
@@ -31,12 +35,15 @@ public class User {
 	private String password;
 	
 	@OneToMany(mappedBy = "scoreUser", fetch = FetchType.EAGER)
+	@JsonManagedReference
 	private List<Score> userScores = new ArrayList<>();	
 
 	@OneToMany(mappedBy = "PersonRewardUser", fetch = FetchType.LAZY)
+	@JsonBackReference//doesn't print this field when writing the JSON
 	private List<PersonReward> userRewards = new ArrayList<>();
 	
 	@OneToOne(mappedBy = "showcaseUser", fetch = FetchType.EAGER)
+	@JsonManagedReference
 	private Showcase showcase;
 
 	public User() {

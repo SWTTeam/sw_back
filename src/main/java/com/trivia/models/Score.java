@@ -16,6 +16,8 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Component
 @Entity
 @Table(name = "scores")
@@ -33,6 +35,7 @@ public class Score {
 
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "scoreUser_id", nullable = false)
+	@JsonBackReference
 	private User scoreUser;
 
 	public Score() {
