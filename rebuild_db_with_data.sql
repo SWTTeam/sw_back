@@ -1,8 +1,12 @@
+drop schema if exists public cascade;
+
 drop table if exists public.questions cascade;
 drop table if exists public.person_reward cascade;
 drop table if exists public.scores cascade;
 drop table if exists public.showcases cascade;
 drop table if exists public.users cascade;
+
+create schema public;
 
 CREATE TABLE public.users (
 	user_id serial NOT NULL,
@@ -17,7 +21,7 @@ CREATE TABLE public.showcases (
 	people1 int4 NULL,
 	people2 int4 NULL,
 	people3 int4 NULL,
-	people4 int4 NULL,
+	people4 int4 NULL,create schema public;
 	user_id int4 NOT NULL,
 	CONSTRAINT showcases_pkey PRIMARY KEY (showcase_id),
 	CONSTRAINT uk_t2kmw8wonvw26jgkgnpesyngp UNIQUE (user_id)
