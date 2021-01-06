@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaQuery;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,8 +34,14 @@ public class UserDAOPostgres implements UserDAO{
 
 	@Override
 	public User findByUsername(String name) {
-		Session s = sf.getCurrentSession();
-		return s.get(User.class, name);
+		System.out.println("in findByUsername()");
+		//Session s = sf.getCurrentSession();
+		//System.out.println("findByUsername got session");
+		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
+		  crit.add(Restrictions.eq("username", name)); //assuming Employee entity has "email" field
+		  return (User) crit.list().get(0);
+		//User u = s.get(User.class, name);
+		//return s.get(User.class, name);
 	}
 
 	@Override
@@ -46,10 +54,8 @@ public class UserDAOPostgres implements UserDAO{
 
 	@Override
 	public void insert(User u) {
-		System.out.println("in UserDAOPostgres.insert()");
 		Session s = sf.getCurrentSession();
 		s.saveOrUpdate(u);
-		System.out.println("user inserted into DB");
 	}
 
 	@Override
@@ -63,4 +69,6 @@ public class UserDAOPostgres implements UserDAO{
 		Session s = sf.getCurrentSession();
 		s.delete(u);
 	}
+	
+	
 }

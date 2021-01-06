@@ -2,6 +2,7 @@ package com.trivia.controllers;
 
 import java.util.List;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.trivia.models.User;
+import com.trivia.repos.UserDAO;
+import com.trivia.repos.UserDAOPostgres;
 import com.trivia.services.UserService;
 
 @RestController
@@ -46,12 +49,9 @@ public class RegisterController {
 
 	@PostMapping
 	public ResponseEntity insertUser(@RequestBody User u) {
-		System.out.println("in RegisterController.insertUser()");
 		if (us.storeUser(u)) {
-			System.out.println("Controller worked");
 			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 		} else {
-			System.out.println("Controller DID NOT work");
 			return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
 		}
 	}
@@ -69,4 +69,5 @@ public class RegisterController {
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
+	
 }
