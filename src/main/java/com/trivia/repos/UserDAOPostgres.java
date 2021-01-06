@@ -46,8 +46,10 @@ public class UserDAOPostgres implements UserDAO{
 
 	@Override
 	public void insert(User u) {
+		System.out.println("in UserDAOPostgres.insert()");
 		Session s = sf.getCurrentSession();
 		s.saveOrUpdate(u);
+		System.out.println("user inserted into DB");
 	}
 
 	@Override

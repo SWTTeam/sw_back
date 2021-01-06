@@ -19,7 +19,7 @@ import com.trivia.models.User;
 import com.trivia.services.UserService;
 
 @RestController
-@RequestMapping(value="/register")
+@RequestMapping(value = "/register")
 @CrossOrigin
 public class RegisterController {
 
@@ -30,12 +30,12 @@ public class RegisterController {
 		super();
 		this.us = us;
 	}
-	
+
 	@GetMapping("/{id}")
 	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
 		User u = us.getById(id);
-		if (u==null)
-			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
+		if (u == null)
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 		return ResponseEntity.status(HttpStatus.OK).body(u);
 	}
 
@@ -43,24 +43,29 @@ public class RegisterController {
 	public ResponseEntity<List<User>> getUsers() {
 		return ResponseEntity.status(HttpStatus.OK).body(us.getAll());
 	}
-	
+
 	@PostMapping
 	public ResponseEntity insertUser(@RequestBody User u) {
-		if(us.storeUser(u))
+		System.out.println("in RegisterController.insertUser()");
+		if (us.storeUser(u)) {
+			System.out.println("Controller worked");
 			return ResponseEntity.status(HttpStatus.ACCEPTED).build();
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
+		} else {
+			System.out.println("Controller DID NOT work");
+			return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
+		}
 	}
-	
+
 	@PutMapping
 	public ResponseEntity<Boolean> updateUser(@RequestBody User u) {
-		if(us.update(u))
+		if (us.update(u))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
+		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}
-	
+
 	@DeleteMapping
 	public ResponseEntity<Boolean> deleteUser(@RequestBody User u) {
-		if(us.delete(u))
+		if (us.delete(u))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
 		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 	}

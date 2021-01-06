@@ -56,12 +56,15 @@ public class UserService {
 	}
 
 	public boolean storeUser(User u) {
+		System.out.println("in UserService.storeUser()");
 		try {
 			final EncryptionUtility eu = new EncryptionUtility();
 			String encryptPass = EncryptionUtility.encrypt(u.getPassword(), eu.getKey());
 			uDao.insert(new User(u.getUsername(), encryptPass, u.getUserScores(), u.getUserRewards(), u.getShowcase()));
+			System.out.println("UserService.storeUser() try block executed");
 		} catch (GeneralSecurityException | IOException e) {
 			e.printStackTrace();
+			System.out.println("UserService.storeUser() catch block executed");
 		}
 
 		User testUser = uDao.findByUsername(u.getUsername());
