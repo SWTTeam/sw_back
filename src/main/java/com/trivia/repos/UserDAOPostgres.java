@@ -4,8 +4,10 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaQuery;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,8 +16,8 @@ import com.trivia.models.User;
 
 @Repository
 @Transactional
-public class UserDAOPostgres implements UserDAO{
-	
+public class UserDAOPostgres implements UserDAO {
+
 	private SessionFactory sf;
 
 	@Autowired
@@ -23,7 +25,7 @@ public class UserDAOPostgres implements UserDAO{
 		super();
 		this.sf = sf;
 	}
-	
+
 	@Override
 	public User findById(int id) {
 		Session s = sf.getCurrentSession();
@@ -32,15 +34,19 @@ public class UserDAOPostgres implements UserDAO{
 
 	@Override
 	public User findByUsername(String name) {
-		Session s = sf.getCurrentSession();
-		return s.get(User.class, name);
+		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
+		crit.add(Restrictions.eq("username", name));
+		return (User) crit.list().get(0);
+
 	}
 
 	@Override
 	public List<User> findAll() {
+		System.out.println("session");
 		Session s = sf.getCurrentSession();
 		CriteriaQuery<User> cq = s.getCriteriaBuilder().createQuery(User.class);
 		cq.from(User.class);
+
 		return s.createQuery(cq).getResultList();
 	}
 

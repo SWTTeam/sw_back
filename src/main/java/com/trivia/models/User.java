@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Table(name = "scoreUser")
+@Table(name = "user")
 public class User {
 	
 	@Id
@@ -30,13 +30,13 @@ public class User {
 	@Column(nullable=false)
 	private String password;
 	
-	@OneToMany(mappedBy = "scoreUser", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	private List<Score> userScores = new ArrayList<>();	
 
-	@OneToMany(mappedBy = "personRewardUser", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 	private List<PersonReward> userRewards = new ArrayList<>();
 	
-	@OneToOne(mappedBy = "showcaseUser", fetch = FetchType.EAGER)
+	@OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
 	private Showcase showcase;
 
 	public User() {

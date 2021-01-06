@@ -29,7 +29,7 @@ public class PersonReward {
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id", nullable=false)
-	private User personRewardUser;
+	private User user;
 
 	public PersonReward() {
 		super();
@@ -38,14 +38,14 @@ public class PersonReward {
 	public PersonReward(int personId, User user) {
 		super();
 		this.personId = personId;
-		this.personRewardUser = user;
+		this.user = user;
 	}
 
 	public PersonReward(int prNumber, int personId, User user) {
 		super();
 		this.prNumber = prNumber;
 		this.personId = personId;
-		this.personRewardUser = user;
+		this.user = user;
 	}
 
 	public int getPrNumber() {
@@ -65,16 +65,16 @@ public class PersonReward {
 	}
 
 	public User getUser() {
-		return personRewardUser;
+		return user;
 	}
 
 	public void setUser(User user) {
-		this.personRewardUser = user;
+		this.user = user;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(personId, prNumber, personRewardUser);
+		return Objects.hash(personId, prNumber, user);
 	}
 
 	@Override
@@ -89,12 +89,12 @@ public class PersonReward {
 			return false;
 		}
 		PersonReward other = (PersonReward) obj;
-		return personId == other.personId && prNumber == other.prNumber && Objects.equals(personRewardUser, other.personRewardUser);
+		return personId == other.personId && prNumber == other.prNumber && Objects.equals(user, other.user);
 	}
 
 	@Override
 	public String toString() {
-		return "PersonReward [prNumber=" + prNumber + ", personId=" + personId + ", user=" + personRewardUser + "]";
+		return "PersonReward [prNumber=" + prNumber + ", personId=" + personId + ", user=" + user + "]";
 	}	
 }
 

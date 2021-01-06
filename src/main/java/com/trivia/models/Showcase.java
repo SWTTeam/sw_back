@@ -36,7 +36,7 @@ public class Showcase {
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name="user_id", nullable=false, unique=true)
-	private User showcaseUser;
+	private User user;
 
 	public Showcase() {
 		super();
@@ -48,7 +48,7 @@ public class Showcase {
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.showcaseUser = user;
+		this.user = user;
 	}
 
 	public Showcase(int showcaseId, int people1, int people2, int people3, int people4, User user) {
@@ -58,7 +58,7 @@ public class Showcase {
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.showcaseUser = user;
+		this.user = user;
 	}
 
 	public int getShowcaseId() {
@@ -102,16 +102,16 @@ public class Showcase {
 	}
 
 	public User getUser() {
-		return showcaseUser;
+		return user;
 	}
 
 	public void setUser(User user) {
-		this.showcaseUser = user;
+		this.user = user;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(people1, people2, people3, people4, showcaseId, showcaseUser);
+		return Objects.hash(people1, people2, people3, people4, showcaseId, user);
 	}
 
 	@Override
@@ -127,12 +127,12 @@ public class Showcase {
 		}
 		Showcase other = (Showcase) obj;
 		return people1 == other.people1 && people2 == other.people2 && people3 == other.people3
-				&& people4 == other.people4 && showcaseId == other.showcaseId && Objects.equals(showcaseUser, other.showcaseUser);
+				&& people4 == other.people4 && showcaseId == other.showcaseId && Objects.equals(user, other.user);
 	}
 
 	@Override
 	public String toString() {
 		return "Showcase [showcaseId=" + showcaseId + ", people1=" + people1 + ", people2=" + people2 + ", people3="
-				+ people3 + ", people4=" + people4 + ", user=" + showcaseUser + "]";
+				+ people3 + ", people4=" + people4 + ", user=" + user + "]";
 	}
 }
