@@ -34,24 +34,17 @@ public class UserDAOPostgres implements UserDAO {
 
 	@Override
 	public User findByUsername(String name) {
+		@SuppressWarnings("deprecation")
 		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
 		crit.add(Restrictions.eq("username", name));
 		return (User) crit.list().get(0);
-		//Session s = sf.getCurrentSession();
-		//System.out.println("findByUsername got session");
-//		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
-//		  crit.add(Restrictions.eq("username", name)); //assuming Employee entity has "email" field
-//		  return (User) crit.list().get(0);
-
 	}
 
 	@Override
 	public List<User> findAll() {
-		System.out.println("session");
 		Session s = sf.getCurrentSession();
 		CriteriaQuery<User> cq = s.getCriteriaBuilder().createQuery(User.class);
 		cq.from(User.class);
-
 		return s.createQuery(cq).getResultList();
 	}
 

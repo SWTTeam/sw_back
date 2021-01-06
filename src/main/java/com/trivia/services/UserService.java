@@ -2,8 +2,6 @@ package com.trivia.services;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,6 +66,7 @@ public class UserService {
 		if (u.getUsername().equals(testUser.getUsername()))
 			return true;
 		return false;
+		
 //		try {
 //			final EncryptionUtility eu = new EncryptionUtility();
 //			User testUser = uDao.findByUsername(u.getUsername());
