@@ -2,6 +2,8 @@ package com.trivia.services;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +32,23 @@ public class UserService {
 		return uDao.findByUsername(name);
 	}
 
-	public User loginVer(User u) {
-		User userVer = uDao.findByUsername(u.getUsername());
-		if (u.getPassword().equals(userVer.getPassword()))
-			return userVer;
+	public User loginVer(User user) {
+		User userVer = uDao.findByUsername(user.getUsername());
+		if (userVer != null) {
+			try {
+				final EncryptionUtility encryptionUtility = new EncryptionUtility();
+				String decryptPass = EncryptionUtility.decrypt(userVer.getPassword(), encryptionUtility.getKey());
+				userVer.setPassword(decryptPass);
+				if (user.getUsername().equals(userVer.getUsername())
+						&& user.getPassword().equals(userVer.getPassword())) {
+					return userVer;
+				}
+			} catch (GeneralSecurityException | IOException e) {
+				e.printStackTrace();
+			}
+		}
 		return null;
+
 	}
 
 	public List<User> getAll() {
@@ -49,10 +63,10 @@ public class UserService {
 		} catch (GeneralSecurityException | IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		User testUser = uDao.findByUsername(u.getUsername());
-		if(u.getUsername().equals(testUser.getUsername()))
-				return true;
+		if (u.getUsername().equals(testUser.getUsername()))
+			return true;
 		return false;
 //		try {
 //			final EncryptionUtility eu = new EncryptionUtility();
