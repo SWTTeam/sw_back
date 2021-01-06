@@ -32,26 +32,26 @@ public class Score {
 	private Date generation;
 
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "user_id", nullable = false)
-	private User user;
+	@JoinColumn(name = "scoreUser_id", nullable = false)
+	private User scoreUser;
 
 	public Score() {
 		super();
 	}
 
-	public Score(int score, Date generation, User user) {
+	public Score(int score, Date generation, User scorescoreUser) {
 		super();
 		this.score = score;
 		this.generation = generation;
-		this.user = user;
+		this.scoreUser = scorescoreUser;
 	}
 
-	public Score(int scoreID, int score, Date generation, User user) {
+	public Score(int scoreID, int score, Date generation, User scoreUser) {
 		super();
 		this.scoreID = scoreID;
 		this.score = score;
 		this.generation = generation;
-		this.user = user;
+		this.scoreUser = scoreUser;
 	}
 
 	public int getScoreID() {
@@ -78,17 +78,17 @@ public class Score {
 		this.generation = generation;
 	}
 
-	public User getUser() {
-		return user;
+	public User getScoreUser() {
+		return scoreUser;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setScoreUser(User scoreUser) {
+		this.scoreUser = scoreUser;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(generation, score, scoreID, user);
+		return Objects.hash(generation, score, scoreID, scoreUser);
 	}
 
 	@Override
@@ -104,12 +104,12 @@ public class Score {
 		}
 		Score other = (Score) obj;
 		return Objects.equals(generation, other.generation) && score == other.score && scoreID == other.scoreID
-				&& Objects.equals(user, other.user);
+				&& Objects.equals(scoreUser, other.scoreUser);
 	}
 
 	@Override
 	public String toString() {
-		return "Score [scoreID=" + scoreID + ", score=" + score + ", generation=" + generation + ", user=" + user
-				+ "]";
+		return "Score [scoreID=" + scoreID + ", score=" + score + ", generation=" + generation + ", scoreUser="
+				+ scoreUser + "]";
 	}
 }

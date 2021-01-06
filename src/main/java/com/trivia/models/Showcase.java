@@ -36,29 +36,29 @@ public class Showcase {
 	
 	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name="user_id", nullable=false, unique=true)
-	private User user;
+	private User showcaseUser;
 
 	public Showcase() {
 		super();
 	}
 
-	public Showcase(int people1, int people2, int people3, int people4, User user) {
+	public Showcase(int people1, int people2, int people3, int people4, User showcaseUser) {
 		super();
 		this.people1 = people1;
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.user = user;
+		this.showcaseUser = showcaseUser;
 	}
 
-	public Showcase(int showcaseId, int people1, int people2, int people3, int people4, User user) {
+	public Showcase(int showcaseId, int people1, int people2, int people3, int people4, User showcaseUser) {
 		super();
 		this.showcaseId = showcaseId;
 		this.people1 = people1;
 		this.people2 = people2;
 		this.people3 = people3;
 		this.people4 = people4;
-		this.user = user;
+		this.showcaseUser = showcaseUser;
 	}
 
 	public int getShowcaseId() {
@@ -101,17 +101,17 @@ public class Showcase {
 		this.people4 = people4;
 	}
 
-	public User getUser() {
-		return user;
+	public User getShowcaseUser() {
+		return showcaseUser;
 	}
 
-	public void setUser(User user) {
-		this.user = user;
+	public void setShowcaseUser(User showcaseUser) {
+		this.showcaseUser = showcaseUser;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(people1, people2, people3, people4, showcaseId, user);
+		return Objects.hash(people1, people2, people3, people4, showcaseId, showcaseUser);
 	}
 
 	@Override
@@ -127,12 +127,13 @@ public class Showcase {
 		}
 		Showcase other = (Showcase) obj;
 		return people1 == other.people1 && people2 == other.people2 && people3 == other.people3
-				&& people4 == other.people4 && showcaseId == other.showcaseId && Objects.equals(user, other.user);
+				&& people4 == other.people4 && showcaseId == other.showcaseId
+				&& Objects.equals(showcaseUser, other.showcaseUser);
 	}
 
 	@Override
 	public String toString() {
 		return "Showcase [showcaseId=" + showcaseId + ", people1=" + people1 + ", people2=" + people2 + ", people3="
-				+ people3 + ", people4=" + people4 + ", user=" + user + "]";
+				+ people3 + ", people4=" + people4 + ", showcaseUser=" + showcaseUser + "]";
 	}
 }

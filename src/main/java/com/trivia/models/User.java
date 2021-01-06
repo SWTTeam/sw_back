@@ -30,13 +30,13 @@ public class User {
 	@Column(nullable=false)
 	private String password;
 	
-	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "scoreUser", fetch = FetchType.EAGER)
 	private List<Score> userScores = new ArrayList<>();	
 
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "PersonRewardUser", fetch = FetchType.LAZY)
 	private List<PersonReward> userRewards = new ArrayList<>();
 	
-	@OneToOne(mappedBy = "user", fetch = FetchType.EAGER)
+	@OneToOne(mappedBy = "showcaseUser", fetch = FetchType.EAGER)
 	private Showcase showcase;
 
 	public User() {
