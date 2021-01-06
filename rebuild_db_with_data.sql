@@ -43,7 +43,7 @@ ALTER TABLE public.person_reward ADD CONSTRAINT fkjg7mevce77dwo43704f4f8h3i FORE
 
 CREATE TABLE public.questions (
 	question_id serial NOT NULL,
-	question varchar(255) NOT NULL, cascade
+	question varchar(255) NOT NULL,
 	CONSTRAINT questions_pkey PRIMARY KEY (question_id),
 	CONSTRAINT uk_nv168ew28d2nc8efey0cs2613 UNIQUE (question)
 );
