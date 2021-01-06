@@ -8,7 +8,6 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,7 +31,16 @@ public class UserDAOPostgres implements UserDAO {
 
 	@Override
 	public User findById(int id) {
-		Session s = sf.getCurrentSession();
+		Session s;
+		try {
+		    s = sf.getCurrentSession();
+		} catch (HibernateException e) {
+		    s = sf.openSession();
+		    User u = s.get(User.class, id);		    
+			s.close();
+			return u;
+		}
+//		Session s = sf.getCurrentSession();
 		return s.get(User.class, id);
 	}
 

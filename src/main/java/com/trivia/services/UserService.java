@@ -31,15 +31,14 @@ public class UserService {
 	}
 
 	public User loginVer(User user) {
-		User userVer = uDao.findByUsername(user.getUsername());
-		if (userVer != null) {
+		User userDB = uDao.findByUsername(user.getUsername());
+		if (userDB != null) {
 			try {
 				final EncryptionUtility encryptionUtility = new EncryptionUtility();
-				String decryptPass = EncryptionUtility.decrypt(userVer.getPassword(), encryptionUtility.getKey());
-				userVer.setPassword(decryptPass);
-				if (user.getUsername().equals(userVer.getUsername())
-						&& user.getPassword().equals(userVer.getPassword())) {
-					return userVer;
+				String decryptPass = EncryptionUtility.decrypt(userDB.getPassword(), encryptionUtility.getKey());
+				userDB.setPassword(decryptPass);
+				if (user.getUsername().equals(userDB.getUsername()) && user.getPassword().equals(userDB.getPassword())) {
+					return userDB;
 				}
 			} catch (GeneralSecurityException | IOException e) {
 				e.printStackTrace();
@@ -79,7 +78,13 @@ public class UserService {
 	}
 
 	public boolean update(User u) {
-		uDao.update(u);
+		try {
+			final EncryptionUtility eu = new EncryptionUtility();
+			String encryptPass = EncryptionUtility.encrypt(u.getPassword(), eu.getKey());
+			uDao.update(new User(u.getUsername(), encryptPass, u.getUserScores(), u.getUserRewards(), u.getShowcase()));
+		} catch (GeneralSecurityException | IOException e) {
+			e.printStackTrace();
+		}
 		if (uDao.findById(u.getUserId()).equals(u))
 			return true;
 		return false;
