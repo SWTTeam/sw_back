@@ -54,7 +54,6 @@ public class LoginController {
 		}else {
 			userDTO = new UserDTO(foundUser.getUserId(), foundUser.getUsername());
 			return ResponseEntity.status(HttpStatus.OK).body(userDTO);
-			//remove this later
 		}
 	}
 	
