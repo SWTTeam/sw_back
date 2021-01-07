@@ -26,14 +26,7 @@ public class PersonRewardController {
 		this.personRewardService = personRewardService;
 	}
 	
-	//private UserService userService;
-	
-//	@Autowired
-//	public PersonRewardController(UserService userService) {
-//		super();
-//		this.userService = userService;
-//	}
-	
+
 	@PostMapping
 	public ResponseEntity insertPersonReward(@RequestBody PersonReward personReward) {
 		
