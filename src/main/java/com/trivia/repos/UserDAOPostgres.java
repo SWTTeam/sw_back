@@ -49,6 +49,7 @@ public class UserDAOPostgres implements UserDAO {
 		@SuppressWarnings("deprecation")
 		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
 		crit.add(Restrictions.eq("username", name));
+		System.out.println((User) crit.list().get(0));
 		return (User) crit.list().get(0);
 	}
 
