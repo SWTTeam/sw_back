@@ -1,5 +1,7 @@
 package com.trivia.services.test;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
@@ -23,8 +25,8 @@ public class UserServiceTest {
 	
 	@BeforeAll
 	static void setUpEnviron() {
-		ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-		userService = ac.getBean(UserService.class);
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		userService = context.getBean(UserService.class);
 	}
 
 	@Test
@@ -38,4 +40,14 @@ public class UserServiceTest {
 			e.getMessage();
 		}
 	}
+	
+	@Test
+	void getByNameTest() {
+		assertNotNull(userService.getByName("bntufte"));
+	}
+	
+//	@Test
+//	void getByNameTestNull() {
+//		assertNull(userService.getByName("bntufte22"));
+//	}
 }
