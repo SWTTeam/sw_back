@@ -47,7 +47,7 @@ public class UserService {
 		return null;
 
 	}
-
+	
 	public List<User> getAll() {
 		return uDao.findAll();
 	}
