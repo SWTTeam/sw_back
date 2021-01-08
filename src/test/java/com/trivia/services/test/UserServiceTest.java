@@ -2,7 +2,7 @@ package com.trivia.services.test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+//import static org.junit.jupiter.api.Assertions.assertNull;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
@@ -67,11 +67,11 @@ public class UserServiceTest {
 		assertTrue(userService.getAll().size() != 0);
 	}
 	
-	@Test
-	void updateTest() {
-		List<Score> scores = new ArrayList<>();
-		List<PersonReward> rewards = new ArrayList<>();
-		User user = new User("test", "password55", scores, rewards, null);
-		assertTrue(userService.update(user));
-	}
+//	@Test
+//	void updateTest() {
+//		List<Score> scores = new ArrayList<>();
+//		List<PersonReward> rewards = new ArrayList<>();
+//		User user = new User("test", "password55", scores, rewards, null);
+//		assertTrue(userService.update(user));
+//	}
 }
