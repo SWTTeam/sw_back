@@ -1,0 +1,560 @@
+2021-01-07 23:00:27 PST INFO  QuestionController:66 - in getQuestion(), about to return qs.getAll()
+2021-01-07 23:18:49 PST INFO  QuestionController:74 - in insertQuestion(), about to enter qs.storeQuestion()
+2021-01-07 23:18:58 PST INFO  QuestionController:66 - in getQuestion(), about to return qs.getAll()
+2021-01-07 23:26:40 PST INFO  QuestionController:66 - in getQuestion(), about to return qs.getAll()
+2021-01-07 23:35:19 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-07 23:53:47 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-07 23:59:23 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-07 23:59:35 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:02:50 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:02:50 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:02:51 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:02:51 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:02:51 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:02:51 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:02:51 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:02:51 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:02:51 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:04:07 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:04:07 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:04:07 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:04:07 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:04:07 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:04:07 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:04:08 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:04:08 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:04:08 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:04:57 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:04:58 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:04:58 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:05:37 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:05:38 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:05:38 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:05:50 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:05:50 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:05:50 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:05:59 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:05:59 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:05:59 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:02 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:02 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:02 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:04 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:04 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:04 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:06 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:06 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:06 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:09 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:09 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:09 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:13 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:13 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:13 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:15 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:15 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:15 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:17 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:17 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:17 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:19 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:19 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:19 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:06:21 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:06:21 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:06:21 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:11:48 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:11:48 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:11:48 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:11:48 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:11:48 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:11:48 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:11:48 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:11:48 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:11:48 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:11:49 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:11:49 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:11:49 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:11:49 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:11:49 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:11:49 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:11:50 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:11:50 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:11:50 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:11:50 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:11:50 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:11:50 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:11:50 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:11:50 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:11:50 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:11:51 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:11:51 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:11:51 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:11:58 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:11:58 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:11:58 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:11:58 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:11:58 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:11:58 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:11:58 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:11:58 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:11:58 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:11:59 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:11:59 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:12:00 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:12:00 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:12:00 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:12:00 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:12:00 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:12:00 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:12:00 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:12:00 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:12:00 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:12:01 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:12:01 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:12:01 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:12:01 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:12:01 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:12:01 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:12:01 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:16:55 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:16:56 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:16:56 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:16:58 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:16:58 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:16:58 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:00 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:00 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:00 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:01 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:01 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:01 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:02 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:03 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:03 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:04 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:04 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:04 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:05 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:06 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:06 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:07 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:07 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:07 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:25 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:25 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:25 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:27 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:27 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:27 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:28 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:29 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:29 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:30 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:30 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:30 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:32 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:33 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:33 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:17:35 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:17:35 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:17:35 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:18:25 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:18:25 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:18:25 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:18:25 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:18:25 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:18:25 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:18:25 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:18:25 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:18:25 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:24:50 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:24:50 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:24:50 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:24:50 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:24:50 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:24:51 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:24:51 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:24:51 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:24:51 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:25:01 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:01 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:01 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:02 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:03 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:03 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:03 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:04 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:04 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:12 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:12 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:12 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:14 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:14 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:14 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:15 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:15 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:15 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:16 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:16 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:16 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:17 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:17 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:17 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:19 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:19 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:19 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:24 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:24 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:24 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:25 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:25 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:25 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:42 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:42 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:42 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:44 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:44 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:44 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:50 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:51 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:51 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:52 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:52 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:52 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:53 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:54 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:54 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:25:58 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 00:25:58 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 00:25:58 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 00:38:06 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:38:06 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:38:06 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:38:06 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:38:06 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:38:06 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:38:06 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:38:06 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:38:06 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:40:48 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:40:48 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:40:49 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:40:49 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:40:49 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:40:49 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:40:49 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:40:49 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:40:49 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:47:02 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:47:02 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:47:03 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:47:03 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:47:03 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:47:03 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:47:03 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:47:03 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:47:03 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:52:02 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:52:02 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:52:02 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:52:02 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:52:02 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:52:02 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:52:02 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:52:02 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:52:02 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:54:45 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 00:54:45 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 00:54:45 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 00:54:45 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 00:54:45 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 00:54:45 PST INFO  UserService:47 - userDB is not null
+2021-01-08 00:54:45 PST INFO  UserService:53 - About to try .equals
+2021-01-08 00:54:45 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 00:54:45 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 00:54:53 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 00:54:53 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 01:03:59 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 01:03:59 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 01:03:59 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 01:03:59 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 01:03:59 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 01:04:00 PST INFO  UserService:47 - userDB is not null
+2021-01-08 01:04:00 PST INFO  UserService:53 - About to try .equals
+2021-01-08 01:04:00 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 01:04:00 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 01:13:24 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:13:24 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:13:24 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:13:36 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:13:36 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:13:36 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:13:44 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:13:45 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:13:45 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:13:57 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:13:57 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:13:57 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:13:59 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:14:00 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:14:00 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:14:01 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:14:01 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:14:01 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:15:19 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:15:19 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:15:19 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:15:38 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:15:38 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:15:38 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:15:47 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:15:48 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:15:48 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:15:49 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:15:49 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:15:49 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:15:50 PST INFO  QuestionController:42 - in getOneQuestion(), about to enter qs.getById()
+2021-01-08 01:15:51 PST INFO  QuestionController:46 - leaving qs.getById(), back in getOneQuestion()
+2021-01-08 01:15:51 PST INFO  QuestionController:55 - 1 is not null
+2021-01-08 01:18:40 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 01:18:40 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 01:18:40 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 01:18:40 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 01:18:40 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 01:18:40 PST INFO  UserService:47 - userDB is not null
+2021-01-08 01:18:40 PST INFO  UserService:53 - About to try .equals
+2021-01-08 01:18:40 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 01:18:40 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 01:23:18 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 01:23:18 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 01:23:18 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 01:23:18 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 01:23:18 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 01:23:18 PST INFO  UserService:47 - userDB is not null
+2021-01-08 01:23:18 PST INFO  UserService:53 - About to try .equals
+2021-01-08 01:23:18 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 01:23:18 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:01:34 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:01:34 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:01:34 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:01:34 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:01:34 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:01:35 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:01:35 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:01:35 PST INFO  UserService:63 - userDB is null
+2021-01-08 02:01:35 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:48:07 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:48:07 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:48:08 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:48:08 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:48:08 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:48:08 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:48:08 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:48:08 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:48:08 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:52:31 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:52:31 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:52:31 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:52:31 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:52:31 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:52:31 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:52:31 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:52:31 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:52:31 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:55:57 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:55:57 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:55:57 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:55:57 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:55:57 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:55:57 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:55:57 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:55:57 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:55:57 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:56:01 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 02:56:01 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 02:57:58 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:57:58 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:57:59 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:57:59 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:57:59 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:57:59 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:57:59 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:57:59 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:57:59 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:58:02 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 02:58:02 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 02:59:10 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 02:59:10 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 02:59:12 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 02:59:12 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 02:59:12 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 02:59:12 PST INFO  UserService:47 - userDB is not null
+2021-01-08 02:59:12 PST INFO  UserService:53 - About to try .equals
+2021-01-08 02:59:12 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 02:59:12 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 02:59:15 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 02:59:15 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:03:31 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:03:31 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:03:32 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:03:32 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:03:41 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:03:41 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:23 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:06:23 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:06:24 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:06:24 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:06:24 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:06:24 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:06:24 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:06:24 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:06:24 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 03:06:28 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:28 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:31 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:31 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:32 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:32 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:32 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:32 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:32 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:33 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:33 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:33 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:33 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:33 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:06:33 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:06:33 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:07:02 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:07:02 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:07:28 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:07:28 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:07:28 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:07:28 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:07:28 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:07:28 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:07:28 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:07:28 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:07:28 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 03:07:32 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:07:32 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:08:21 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:08:21 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:08:22 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:08:22 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:08:22 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:08:22 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:08:22 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:08:22 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:08:22 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 03:08:25 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:08:25 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:09:07 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:09:07 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:09:07 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:09:07 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:09:07 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:09:07 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:09:07 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:09:07 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:09:07 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 03:09:10 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:09:10 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:10:31 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:10:31 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:10:31 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:10:31 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:10:31 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:10:31 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:10:31 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:10:31 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:10:31 PST INFO  LoginController:85 - foundUser is not null
+2021-01-08 03:10:34 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:10:35 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:13:42 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:13:43 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:17:48 PST INFO  ScoreController:71 - in insertScore(), about to enter ss.storeScore()
+2021-01-08 03:17:55 PST INFO  ScoreController:63 - in getScore(), about to enter ss.getAll()
+2021-01-08 03:29:32 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:29:32 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:29:32 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:29:32 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:29:32 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:29:32 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:29:32 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:29:32 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:29:32 PST INFO  LoginController:84 - foundUser is not null
+2021-01-08 03:29:41 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:29:42 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:33:07 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:33:07 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:36:45 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:36:45 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:38:48 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:38:48 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:46:02 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:46:02 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:46:02 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:46:02 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:48:26 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 03:48:26 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 03:48:26 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 03:48:26 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 03:48:26 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 03:48:26 PST INFO  UserService:47 - userDB is not null
+2021-01-08 03:48:26 PST INFO  UserService:53 - About to try .equals
+2021-01-08 03:48:26 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 03:48:26 PST INFO  LoginController:84 - foundUser is not null
+2021-01-08 03:48:28 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:48:28 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:51:26 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:51:27 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:51:27 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:51:27 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:51:27 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:51:27 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:55:00 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:55:00 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:55:00 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:55:00 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 03:55:00 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 03:55:01 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:13:03 PST INFO  LoginController:74 - in loginVerification(), about to enter userService.loginVer()
+2021-01-08 04:13:03 PST INFO  UserService:40 - in LoginVer(), about to enter findByUsername()
+2021-01-08 04:13:04 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 04:13:04 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 04:13:04 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
+2021-01-08 04:13:04 PST INFO  UserService:47 - userDB is not null
+2021-01-08 04:13:04 PST INFO  UserService:53 - About to try .equals
+2021-01-08 04:13:04 PST INFO  LoginController:78 - leaving userService.loginVer(), back in loginVerification()
+2021-01-08 04:13:04 PST INFO  LoginController:84 - foundUser is not null
+2021-01-08 04:13:08 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:13:08 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:13:19 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:13:19 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:13:56 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:13:58 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:13:58 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:13:58 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:13:58 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:13:58 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:14:40 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:14:40 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:14:40 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:14:41 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:14:41 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:14:41 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:15:28 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:15:30 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:15:30 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:15:30 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:15:30 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:15:30 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:16:03 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:16:04 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:16:04 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:16:04 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:16:04 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
+2021-01-08 04:16:04 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 04:18:22 PST INFO  LoginController:101 - in updateUser(), about to enter userService.update()

@@ -44,6 +44,7 @@ public class User {
 	
 	@OneToOne(mappedBy = "showcaseUser", fetch = FetchType.EAGER)
 	@JsonManagedReference
+	
 	private Showcase showcase;
 
 	public User() {

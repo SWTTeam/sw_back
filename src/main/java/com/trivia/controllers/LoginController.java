@@ -76,7 +76,6 @@ public class LoginController {
 		User foundUser = userService.loginVer(user);
 		
 		log.info("leaving userService.loginVer(), back in loginVerification()");
-		
 		UserDTO userDTO = null;
 		if (foundUser == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();	

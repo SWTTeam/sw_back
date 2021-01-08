@@ -33,7 +33,7 @@ public class Score {
 	@Column(nullable = false)
 	private Date generation;
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinColumn(name = "scoreUser_id", nullable = false)
 	@JsonBackReference
 	private User scoreUser;
