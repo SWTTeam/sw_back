@@ -10,7 +10,7 @@ public interface PersonRewardDAO {
 	
 	public List<PersonReward> findAll();
 	
-	public void insert(PersonReward reward);
+	public int insert(PersonReward reward);
 	
 	public void delete(PersonReward reward);
 	

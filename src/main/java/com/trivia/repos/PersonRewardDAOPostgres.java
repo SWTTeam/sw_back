@@ -39,9 +39,10 @@ public class PersonRewardDAOPostgres implements PersonRewardDAO {
 	}
 
 	@Override
-	public void insert(PersonReward reward) {
+	public int insert(PersonReward reward) {
 		Session session = sessionFactory.getCurrentSession();
-		session.saveOrUpdate(reward);
+		return (int) session.save(reward);
+		
 	}
 
 	@Override

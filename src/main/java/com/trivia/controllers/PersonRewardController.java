@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.trivia.models.PersonReward;
 import com.trivia.services.PersonRewardService;
-import com.trivia.services.UserService;
 
 @RestController
 @RequestMapping(value = "/reward")
