@@ -1,4 +1,4 @@
-FROM tomcat:8.5.58
+FROM tomcat:9.0.40
 
 COPY ./target/*.war $CATALINA_HOME/webapps
 
