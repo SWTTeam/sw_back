@@ -12,9 +12,6 @@
     http://www.springframework.org/schema/mvc 
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
-<<<<<<< HEAD
+
     <mvc:default-servlet-handler/>
-=======
-     <mvc:default-servlet-handler/>
->>>>>>> 568e533a35ce8eb53caa7f0ff12b4ed7d055a453
 </beans>

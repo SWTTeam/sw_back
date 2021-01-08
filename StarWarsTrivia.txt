@@ -630,3 +630,6 @@
 2021-01-08 04:36:08 PST INFO  ScoreController:63 - in getScore(), about to enter ss.getAll()
 2021-01-08 04:36:24 PST INFO  ShowcaseController:42 - in getOneShowcase(), about to enter scs.getById()
 2021-01-08 04:36:24 PST INFO  ShowcaseController:52 - sc is not null
+2021-01-08 05:07:17 PST INFO  UserDAOPostgres:55 - in findByUsername(), about to enter sf.getCurrentSession()
+2021-01-08 05:07:17 PST INFO  UserDAOPostgres:60 - about to enter crit.add
+2021-01-08 05:07:17 PST INFO  UserDAOPostgres:65 - about to enter crit.list()
