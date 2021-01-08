@@ -64,7 +64,7 @@ public class LoginController {
 //		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
 //	}
 	
-	@PutMapping
+	@PutMapping("/update")
 	public ResponseEntity<Boolean> updateUser(@RequestBody User user) {
 		if(userService.update(user))
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
