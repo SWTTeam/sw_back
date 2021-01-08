@@ -4,15 +4,20 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.trivia.controllers.LoginController;
 import com.trivia.models.User;
 import com.trivia.repos.UserDAO;
 import com.trivia.utilities.EncryptionUtility;
 
 @Service
 public class UserService {
+	
+	private static final Logger log = LogManager.getLogger(UserService.class); 
 
 	private UserDAO uDao;
 
@@ -31,12 +36,22 @@ public class UserService {
 	}
 
 	public User loginVer(User user) {
+		
+		log.info("in LoginVer(), about to enter findByUsername()");
+		
 		User userDB = uDao.findByUsername(user.getUsername());
+		
 		if (userDB != null) {
 			try {
+				
+				log.info("userDB is not null");
+				
 				final EncryptionUtility encryptionUtility = new EncryptionUtility();
 				String decryptPass = EncryptionUtility.decrypt(userDB.getPassword(), encryptionUtility.getKey());
 				userDB.setPassword(decryptPass);
+				
+				log.info("About to try .equals");
+				
 				if (user.getUsername().equals(userDB.getUsername()) && user.getPassword().equals(userDB.getPassword())) {
 					return userDB;
 				}
@@ -44,6 +59,9 @@ public class UserService {
 				e.printStackTrace();
 			}
 		}
+		
+		log.info("userDB is null");
+		
 		return null;
 
 	}

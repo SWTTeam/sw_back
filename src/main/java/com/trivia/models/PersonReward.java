@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Component
 @Entity
@@ -32,7 +32,7 @@ public class PersonReward {
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id", nullable=false)
-	@JsonManagedReference
+	@JsonBackReference
 	private User PersonRewardUser;
 
 	public PersonReward() {
