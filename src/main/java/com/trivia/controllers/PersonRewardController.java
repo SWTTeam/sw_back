@@ -25,6 +25,7 @@ public class PersonRewardController {
 		this.personRewardService = personRewardService;
 	}
 	
+
 	@PostMapping
 	public ResponseEntity insertPersonReward(@RequestBody PersonReward personReward) {
 		
