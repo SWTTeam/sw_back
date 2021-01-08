@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaQuery;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -15,11 +17,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.trivia.models.User;
+import com.trivia.services.UserService;
 
 @Repository
 @Transactional
 @EnableTransactionManagement
 public class UserDAOPostgres implements UserDAO {
+	
+	private static final Logger log = LogManager.getLogger(UserDAOPostgres.class);
 
 	private SessionFactory sf;
 
@@ -46,10 +51,18 @@ public class UserDAOPostgres implements UserDAO {
 
 	@Override
 	public User findByUsername(String name) {
+		
+		log.info("in findByUsername(), about to enter sf.getCurrentSession()");
+		
 		@SuppressWarnings("deprecation")
 		Criteria crit = sf.getCurrentSession().createCriteria(User.class);
+		
+		log.info("about to enter crit.add");
+		
 		crit.add(Restrictions.eq("username", name));
-		System.out.println((User) crit.list().get(0));
+		//System.out.println((User) crit.list().get(0));
+		
+		log.info("about to enter crit.list()");
 		return (User) crit.list().get(0);
 	}
 

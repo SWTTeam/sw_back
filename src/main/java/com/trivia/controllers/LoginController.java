@@ -2,6 +2,8 @@ package com.trivia.controllers;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +25,8 @@ import com.trivia.services.UserService;
 @RequestMapping(value="/login")
 @CrossOrigin
 public class LoginController {
+	
+	private static final Logger log = LogManager.getLogger(LoginController.class); 
 
 	private UserService userService;
 
@@ -34,24 +38,52 @@ public class LoginController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<User> getOneUser(@PathVariable("id") int id) {
+		
+		log.info("in getOneUser(), about to enter userService.getId()");
+		
 		User user = userService.getById(id);
-		if (user == null)
+		
+		log.info("leaving userService.getId(), back in getOneUser()");
+		
+		if (user == null) {
+			
+			log.info("user is null");
+			
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();		
-		return ResponseEntity.status(HttpStatus.OK).body(user);
+		} else {
+			
+			log.info("user is not null");
+			
+			return ResponseEntity.status(HttpStatus.OK).body(user);
+		}
+			
+		
 	}
 
 	@GetMapping
 	public ResponseEntity<List<User>> getUsers() {
+		
+		log.info("in getUsers(), about to return userService.getAll()");
+		
 		return ResponseEntity.status(HttpStatus.OK).body(userService.getAll());
 	}
 	
 	@PostMapping
 	public ResponseEntity<UserDTO> loginVerification(@RequestBody User user) {
+		
+		log.info("in loginVerification(), about to enter userService.loginVer()");
+		
 		User foundUser = userService.loginVer(user);
+		
+		log.info("leaving userService.loginVer(), back in loginVerification()");
+		
 		UserDTO userDTO = null;
 		if (foundUser == null) {
 			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();	
 		}else {
+			
+			log.info("foundUser is not null");
+			
 			userDTO = new UserDTO(foundUser.getUserId(), foundUser.getUsername());
 			return ResponseEntity.status(HttpStatus.OK).body(userDTO);
 		}
@@ -66,15 +98,41 @@ public class LoginController {
 	
 	@PutMapping("/update")
 	public ResponseEntity<Boolean> updateUser(@RequestBody User user) {
-		if(userService.update(user))
+		
+		log.info("in updateUser(), about to enter userService.update()");
+		
+		if(userService.update(user)) {
+			
+			log.info("leaving userService.update() with 'true', back in updateUser()");
+			
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);		
+		} else {
+			
+			log.info("leaving userService.update() with 'false', back in updateUser()");
+			
+			return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+		}
+			
+				
 	}
 	
 	@DeleteMapping
 	public ResponseEntity<Boolean> deleteUser(@RequestBody User user) {
-		if(userService.delete(user))
+		
+		log.info("in deleteUser(), about to enter userService.delete()");
+		
+		if(userService.delete(user)) {
+			
+			log.info("leaving userService.delete() with 'true', back in deleteUser()");
+			
 			return ResponseEntity.status(HttpStatus.ACCEPTED).body(true);
-		return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+		} else {
+			
+			log.info("leaving userService.delete() with 'false', back in deleteUser()");
+			
+			return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(false);
+		}
+			
+		
 	}
 }

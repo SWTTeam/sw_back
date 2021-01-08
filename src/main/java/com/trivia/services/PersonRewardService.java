@@ -28,8 +28,9 @@ public class PersonRewardService {
 	}
 	
 	public boolean insert(PersonReward reward) {
-		personRewardDAO.insert(reward);
-		if(personRewardDAO.findById(reward.getPersonId()).equals(reward)) {
+		int id = personRewardDAO.insert(reward);
+		
+		if(personRewardDAO.findById(id).getPersonId() == reward.getPersonId()) {
 			return true;
 		}else {
 			return false;
