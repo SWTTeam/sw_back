@@ -36,8 +36,8 @@ In this web based trivia game, players are asked questions about different Star 
 
 **To-do List of Improvements**
 * Add the ability for users to switch out characters in their showcase with characters in their list of reward characters
-* Establish successful connection to back end running on EC2
-	* While a containerized project was successfully spun up in a Jenkins CI/CD pipeline on an EC2, we were unable to get any response from it other than a 404 resposne code.
+* Establish a successful connection to back end running on EC2
+	* While a containerized project was successfully spun up in a Jenkins CI/CD pipeline on an EC2, we were unable to get any response from it other than a 404 response code.
 ![](./BuildSuccess.png)
 ![](./SuccessLog.png)
 * Add more unit tests
@@ -49,7 +49,7 @@ In this web based trivia game, players are asked questions about different Star 
 * git clone https://github.com/bntufte/sw_back.git
 * git pull
 * Open the project in Spring Tool Suite 4 or equivalent. Perform a Maven Update Project to acquire all the necessary dependencies
-* Change the database url in applicationContext.xml along with the username and password values
+* Change the database URL in applicationContext.xml along with the username and password values
 
 ## Usage
 * In IDE, right click project > RUN AS > RUN AS SERVER
