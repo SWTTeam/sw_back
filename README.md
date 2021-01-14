@@ -38,6 +38,8 @@ In this web based trivia game, players are asked questions about different Star 
 * Add the ability for users to switch out characters in their showcase with characters in their list of reward characters
 * Establish successful connection to back end running on EC2
 	* While a containerized project was successfully spun up in a Jenkins CI/CD pipeline on an EC2, we were unable to get any response from it other than a 404 resposne code.
+![](./BuildSuccess.png)
+![](./SuccessLog.png)
 * Add more unit tests
 * Add the necessary back end logic for creating a chat board in the front end
 * Add a system for trading cards
